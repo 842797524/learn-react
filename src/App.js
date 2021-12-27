@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import {MyContext} from './context';
 import './App.css';
+import Demo from './Demo1';
+import RouterDemo from './RouterDemo';
+
+const contextObj = {
+  name: 'contextObj-value',
+  arr: [1, 2],
+  child: {
+    name: 'child',
+  },
+};
+setTimeout(() => {
+  contextObj.name = 10;
+}, 1000);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <MyContext.Provider value={contextObj}>
+          <div className="App">
+            {/*<Demo></Demo>*/}
+            <RouterDemo></RouterDemo>
+          </div>
+        </MyContext.Provider>
+      </>
   );
 }
 
