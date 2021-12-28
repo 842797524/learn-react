@@ -1,8 +1,8 @@
 import {MyContext} from './context';
 import './App.css';
-import Demo from './Demo1';
-import RouterDemo from './RouterDemo';
-
+// import Demo from './Demo1';
+// import RouterDemo from './RouterDemo';
+import ReduxApp from './ReduxDemo';
 const contextObj = {
   name: 'contextObj-value',
   arr: [1, 2],
@@ -20,7 +20,8 @@ function App() {
         <MyContext.Provider value={contextObj}>
           <div className="App">
             {/*<Demo></Demo>*/}
-            <RouterDemo></RouterDemo>
+            {/*<RouterDemo />*/}
+            <ReduxApp/>
           </div>
         </MyContext.Provider>
       </>

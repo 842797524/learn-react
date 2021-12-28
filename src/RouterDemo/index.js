@@ -59,7 +59,6 @@ class Home extends Component {
 class HomeChild extends Component {
   render() {
     const {params: {index}, location: {state}} = this.props;
-    console.log('HomeChild.props', this.props)
     return (<div className="home-child">
       <span>这是第{index}个 child --- useParams</span>
       <span>参数： {state.params} --- useLocation</span>

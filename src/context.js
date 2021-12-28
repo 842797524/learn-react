@@ -8,5 +8,3 @@ const contextObj = {
   },
 };
 export const MyContext = createContext(contextObj);
-
-console.log('MyContext', MyContext)
