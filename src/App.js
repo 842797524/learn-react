@@ -3,6 +3,8 @@ import './App.css';
 // import Demo from './Demo1';
 // import RouterDemo from './RouterDemo';
 import ReduxApp from './ReduxDemo';
+import HooksDemo from './HooksDemo';
+
 const contextObj = {
   name: 'contextObj-value',
   arr: [1, 2],
@@ -17,11 +19,12 @@ setTimeout(() => {
 function App() {
   return (
       <>
+        <HooksDemo/>
         <MyContext.Provider value={contextObj}>
           <div className="App">
             {/*<Demo></Demo>*/}
-            {/*<RouterDemo />*/}
-            <ReduxApp/>
+            {/*<RouterDemo/>*/}
+            {/*<ReduxApp/>*/}
           </div>
         </MyContext.Provider>
       </>
